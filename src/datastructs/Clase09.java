@@ -25,6 +25,7 @@ public class Clase09 {
     teclado.close();
 
     while (increment > 0) {
+      System.out.println(Arrays.toString(array));
       for (i = increment + 1; i <= lenght; i++) {
         j = i - increment;
         while (j > 0) {
