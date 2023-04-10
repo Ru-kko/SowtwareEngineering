@@ -1,4 +1,4 @@
-package datastructs.Clase05;
+package structs.Clase05;
 
 import java.util.Scanner;
 import java.util.Stack;

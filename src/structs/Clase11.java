@@ -1,6 +1,6 @@
-package datastructs;
+package structs;
 
-import datastructs.utils.Sorter;
+import structs.utils.Sorter;
 
 /**
  * Binery sorting

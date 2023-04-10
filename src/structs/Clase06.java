@@ -1,4 +1,4 @@
-package datastructs;
+package structs;
 
 import java.util.Scanner;
 

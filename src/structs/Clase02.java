@@ -1,4 +1,4 @@
-package datastructs;
+package structs;
 
 public class Clase02 {
     // Make an array

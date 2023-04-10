@@ -1,4 +1,4 @@
-package datastructs.utils;
+package structs.utils;
 
 public class Sorter<T> {
   private T[] list;

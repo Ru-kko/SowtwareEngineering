@@ -1,4 +1,4 @@
-package datastructs.Clase04;
+package structs.Clase04;
 import java.util.Stack;;
 
 // Pilas LIFO

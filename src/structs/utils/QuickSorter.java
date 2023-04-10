@@ -1,4 +1,4 @@
-package datastructs.utils;
+package structs.utils;
 
 @SuppressWarnings("all")
 public class QuickSorter<T> {
