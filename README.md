@@ -1,4 +1,4 @@
-# Repositori en la nuve do todos mis trabajos y tareas de ingenieria en la universidad compensar
-# Estructuras De Datos
+# Repositorio de todos mis trabajos y tareas de ingenieria en la universidad compensar
+# Lenguajes De Internet
 ## Jose Sebastian Vera
 
