@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripcion</title>
+  </head>
+  <body>
+    <center>
+      <form action="" method="get">
+        <table>
+          <tr>
+            <td>
+              <label>
+                Primer Nombre
+                <input type="text" name="frist_name" required />
+              </label>
+            </td>
+            <td>
+              <label>
+                Segundo Nombre
+                <input type="text" name="second_name" />
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <label>
+                Surname
+                <input type="text" name="surname" readonly />
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <label
+                >Genero
+                <select name="sex">
+                  <option disabled>Seleccione</option>
+                  <option value="male">Hombre</option>
+                  <option value="female">Mujer</option>
+                </select>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Lugar de nacimiento
+                <select name="born_place" required>
+                  <option disabled>Seleccione</option>
+                  <option value="BG">Bogotá</option>
+                  <option value="CL">Cali</option>
+                  <option value="VL">Villavicencio</option>
+                  <option value="BRR">Barranquilla</option>
+                </select>
+              </label>
+            </td>
+            <td>
+              <label>
+                Fecha de nacimiento
+                <input type="date" name="born_date" required />
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Tipos de documento
+                <select name="indentify_type">
+                  <option disabled>Seleccione</option>
+                  <option value="CC">Cedula de ciudadania</option>
+                  <option value="CE">Cedula extragera</option>
+                  <option value="TI">Targeta de identida</option>
+                  <option value="NIT">NIT</option>
+                </select>
+              </label>
+            </td>
+            <td>
+              <label>
+                Documento de Indentidad
+                <input type="number" name="indentify" readonly />
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label
+                >Direccion
+                <input type="text" name="direccion" />
+              </label>
+            </td>
+            <td>
+              <label>
+                Telefono
+                <input type="number" name="phone" />
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label
+                >E-mail
+                <input type="email" />
+              </label>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>
