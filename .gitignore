@@ -1,3 +1,5 @@
 *.pdf
 build
 nbproject
+*.mp3
+*.mp4
