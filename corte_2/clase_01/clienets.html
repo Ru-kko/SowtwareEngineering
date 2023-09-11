@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Acceder</li>
+          <li>Noticias</li>
+        </ul>
+        <img src="/assets/logo.png" alt="logo" width="7%" />
+        <h1>Nombre de la empresa automotriz</h1>
+      </nav>
+    </header>
+    <main>
+      <sidebar>
+        <h2>Nuevo Usuario</h2>
+        <form action="" method="post">
+          <label>ID: <input type="number" name="id" /></label>
+          <br />
+          <label>Nombre: <input type="text" name="name" /></label>
+          <br />
+          <label>Direccion: <input type="text" name="address" /></label>
+          <br />
+          <label>Tel: <input type="number" name="phone" /></label>
+          <br />
+          <label>credito: <input type="number" name="credit" /></label>
+          <br />
+          <input type="submit" value="agregar" />
+          <input type="button" value="cancelar" />
+        </form>
+      </sidebar>
+
+      <aside class="content">
+        <table border="1">
+          <title>Listado Clientes</title>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Dirreccion</th>
+              <th>Tel</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Jonh Doe</td>
+              <td>Cll 12 No 52 - 65</td>
+              <td>315253464</td>
+              <td><button>Editar</button><button>Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>Jane Doe</td>
+              <td>Cr 23 No 21 - 64</td>
+              <td>310647236</td>
+              <td><button>Editar</button><button>Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>Pepe</td>
+              <td>Cll 26B No 64 - 24 </td>
+              <td>322546813</td>
+              <td><button>Editar</button><button>Eliminar</button></td>
+            </tr>
+            <tr>
+              <td>54</td>
+              <td>Juan</td>
+              <td>Cr 7a No 12i - 92</td>
+              <td>320546762</td>
+              <td><button>Editar</button><button>Eliminar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </main>
+    <footer>
+      <div class="feet">
+        <p><b>Empresa: </b> Lorem ipsum</p>
+        <p><b>Direccion: </b> cll 45 no 54 -24</p>
+        <p><b>Telefono: </b>601785457 - +57 3225468546</p>
+      </div>
+      <div class="extern">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Youtube</a>
+      </div>
+    </footer>
+  </body>
+</html>
