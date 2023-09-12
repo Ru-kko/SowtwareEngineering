@@ -1,0 +1,47 @@
+﻿namespace Parcial;
+
+class App
+{
+  public static void Main()
+  {
+    new App().execute();
+  }
+
+
+  /*
+  * Funcion recursiva para ingresar un numero por teclado, 
+  * si el numero no tiene un foirmato valido lo intentara de 
+  * nuevo hasta que se inserte un numero valido
+  */
+  private int GetNumber()
+  {
+    try
+    {
+      Console.Write("\nIngrese un numero entero: ");
+      var res = Console.ReadLine();
+
+      return Convert.ToInt32(res);
+    }
+    catch (FormatException)
+    {
+      Console.WriteLine("Ese no es un numero valido, intente de nuevo");
+      return GetNumber();
+    }
+  }
+  /*
+  * Un ciclo for hasta 10 para resivir los numeros.
+  * usa operadores ternarios para reducir la comṕlejidad
+  * ciclometica y evaluda con Mod(2) del numero ingresado
+  * para saber si es par
+  */
+  public void execute()
+  {
+    Console.Clear();
+    for (int i = 1; i <= 10; i++)
+    {
+      var num = GetNumber();
+
+      Console.Write(num % 2 == 0 ? "es un numero par" : "es un numero impar");
+    }
+  }
+}
