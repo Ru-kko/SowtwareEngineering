@@ -1,0 +1,25 @@
+h2 {
+  font-size: small;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+p {
+  line-height: 1.5;
+  background-color: aqua;
+}
+
+.second-paragraph {
+  text-align: center;
+  vertical-align: bottom;
+  font-style: italic;
+  font-weight: 900;
+}
+
+cite {
+  color: rgb(3, 50, 214);
+  text-decoration: line-through;
+  text-shadow: 15px 17px 20px red;
+}
