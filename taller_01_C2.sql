@@ -98,6 +98,7 @@ SELECT INSERT("W3Schools.com", 1, 5, "Example"); --> Example3Schools.com
 -- Transforma en mayusculas o minusculas segun la funcion
 SELECT LOWER("aAbB") AS minusculas; --> aabb
 SELECT UPPER("aAbB") AS mayusculas; --> AABB
+SELECT UCASE("aAbB") AS mayusculas2; --> AABB
 
 -- INSTR, LOCATE, POSITION
 -- Retorna la primera posicion de un valor en un string
@@ -127,8 +128,14 @@ SELECT REPEAT("a", 3); --> aaa
 -- REPLACE
 -- Remplaza los caracteres iguales con otra cadena
 
-SELECT REPEAT("Jonh Doe", "Doe", "Jonh"); --> Jonh Jonh
+SELECT REPLACE("Jonh Doe", "Doe", "Jonh"); --> Jonh Jonh
 
 -- REVERSE
 -- Crea un string con los caracteres en reversa
 SELECT REVERSE("abc"); --> cba
+
+
+-- SUBSTRING
+-- extrae una parte de una cadena en cualquier posicion
+SELECT SUBSTRING("FOOBAR", 2, 4); --> OOBA
+SELECT SUBSTR("FOOBAR", 2, 4); --> OOBA
