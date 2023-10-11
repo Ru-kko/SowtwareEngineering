@@ -1,0 +1,18 @@
+.fondoimg {
+  height: 500px;
+  width: 350px;
+  background-image: url('https://i.pinimg.com/474x/12/55/1a/12551a30d33ccb3d8b4beacc54daa886.jpg');
+  background-repeat: no-repeat;
+}
+
+.fondoimg p {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLzsf0HiSJvciaEnsU8X58pVjQ8i4MV4xDDqYj_73HUA&s');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200vh;
+}
