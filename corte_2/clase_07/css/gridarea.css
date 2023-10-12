@@ -1,0 +1,37 @@
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "head      head      head"
+                       "sidebar-1 content   sidebar-2"
+                       "sidebar-1 widgets   sidebar-2"
+                       "footer    footer    footer";
+
+}
+
+.container .head {
+  background-color: #ff8000;
+  grid-column-start: head;
+  grid-column-end: head;
+}
+
+.container .sidebar-1 {
+  background-color: #333fac;
+  grid-area: sidebar-1;
+}
+
+.container .sidebar-2 {
+  background-color: #333fac;
+  grid-area: sidebar-2;
+}
+
+.container .content {
+  background-color: #FFF;
+  grid-area: content;
+}
+
+.container .footer {
+  grid-area: footer;
+  background-color: blueviolet;
+}
