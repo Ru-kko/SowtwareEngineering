@@ -11,7 +11,8 @@ namespace WinFormsApp1
         {
             Add,
             Subtract,
-            Multiply
+            Multiply,
+            Divide
         }
 
         public Calculator()
@@ -60,6 +61,20 @@ namespace WinFormsApp1
                         this.actual = 0;
                         this.Panel.Text = "";
                         break;
+                    case "/":
+                        this.lastOperation = AricmeticOperation.Divide;
+                        try
+                        {
+                            this.stored = stored != null ? this.stored / actual : this.actual;
+                            this.actual = 0;
+                        }
+                        catch (DivideByZeroException)
+                        {
+                            this.stored = 0;
+                            this.actual = 0;
+                        }
+                        this.Panel.Text = "";
+                        break;
                     case "CE":
                         this.lastOperation = null;
                         this.actual = 0;
@@ -84,6 +99,9 @@ namespace WinFormsApp1
                         break;
                     case AricmeticOperation.Multiply:
                         this.stored *= this.actual;
+                        break;
+                    case AricmeticOperation.Divide:
+                        this.stored /= this.actual;
                         break;
                 }
                 this.lastOperation = null;
@@ -116,11 +134,6 @@ namespace WinFormsApp1
                 }
             }
             chagedFromCode = false;
-        }
-
-        private void LayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

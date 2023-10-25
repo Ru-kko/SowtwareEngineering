@@ -31,6 +31,7 @@ namespace WinFormsApp1
         private void InitializeComponent()
         {
             KeyboardPanel = new TableLayoutPanel();
+            divide = new Button();
             Number0 = new Button();
             Point = new Button();
             Number7 = new Button();
@@ -56,13 +57,15 @@ namespace WinFormsApp1
             // KeyboardPanel
             // 
             KeyboardPanel.BackColor = Color.Transparent;
-            KeyboardPanel.ColumnCount = 4;
-            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            KeyboardPanel.ColumnCount = 5;
+            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            KeyboardPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            KeyboardPanel.Controls.Add(divide, 3, 3);
             KeyboardPanel.Controls.Add(Number0, 0, 3);
-            KeyboardPanel.Controls.Add(Point, 0, 3);
+            KeyboardPanel.Controls.Add(Point, 2, 3);
             KeyboardPanel.Controls.Add(Number7, 0, 0);
             KeyboardPanel.Controls.Add(Number8, 1, 0);
             KeyboardPanel.Controls.Add(Number9, 2, 0);
@@ -75,35 +78,56 @@ namespace WinFormsApp1
             KeyboardPanel.Controls.Add(Number2, 1, 2);
             KeyboardPanel.Controls.Add(Number3, 2, 2);
             KeyboardPanel.Controls.Add(MultiplyAction, 3, 2);
-            KeyboardPanel.Controls.Add(DelAction, 1, 3);
-            KeyboardPanel.Controls.Add(EqualsAction, 3, 3);
+            KeyboardPanel.Controls.Add(DelAction, 4, 0);
+            KeyboardPanel.Controls.Add(EqualsAction, 4, 2);
             KeyboardPanel.Dock = DockStyle.Fill;
-            KeyboardPanel.Location = new Point(20, 92);
+            KeyboardPanel.Location = new Point(10, 119);
             KeyboardPanel.Margin = new Padding(0);
             KeyboardPanel.Name = "KeyboardPanel";
-            KeyboardPanel.Padding = new Padding(2);
+            KeyboardPanel.Padding = new Padding(10);
             KeyboardPanel.RowCount = 4;
             KeyboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             KeyboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             KeyboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             KeyboardPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            KeyboardPanel.Size = new Size(346, 371);
+            KeyboardPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            KeyboardPanel.Size = new Size(495, 479);
             KeyboardPanel.TabIndex = 0;
+            // 
+            // divide
+            // 
+            divide.BackColor = Color.DimGray;
+            divide.BackgroundImageLayout = ImageLayout.None;
+            divide.Dock = DockStyle.Fill;
+            divide.FlatAppearance.BorderColor = Color.White;
+            divide.FlatAppearance.BorderSize = 0;
+            divide.FlatStyle = FlatStyle.Flat;
+            divide.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            divide.ForeColor = SystemColors.Control;
+            divide.Location = new Point(305, 362);
+            divide.Margin = new Padding(10);
+            divide.Name = "divide";
+            divide.Size = new Size(75, 97);
+            divide.TabIndex = 16;
+            divide.Text = "/";
+            divide.UseVisualStyleBackColor = false;
+            divide.Click += PerformOperation;
             // 
             // Number0
             // 
             Number0.BackColor = Color.DarkGray;
             Number0.BackgroundImageLayout = ImageLayout.None;
+            KeyboardPanel.SetColumnSpan(Number0, 2);
             Number0.Dock = DockStyle.Fill;
             Number0.FlatAppearance.BorderColor = Color.White;
             Number0.FlatAppearance.BorderSize = 0;
             Number0.FlatStyle = FlatStyle.Flat;
             Number0.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number0.ForeColor = SystemColors.Control;
-            Number0.Location = new Point(89, 277);
-            Number0.Margin = new Padding(2);
+            Number0.Location = new Point(20, 362);
+            Number0.Margin = new Padding(10);
             Number0.Name = "Number0";
-            Number0.Size = new Size(81, 90);
+            Number0.Size = new Size(170, 97);
             Number0.TabIndex = 15;
             Number0.Text = "0";
             Number0.UseVisualStyleBackColor = false;
@@ -119,10 +143,10 @@ namespace WinFormsApp1
             Point.FlatStyle = FlatStyle.Flat;
             Point.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Point.ForeColor = SystemColors.Control;
-            Point.Location = new Point(4, 277);
-            Point.Margin = new Padding(2);
+            Point.Location = new Point(210, 362);
+            Point.Margin = new Padding(10);
             Point.Name = "Point";
-            Point.Size = new Size(81, 90);
+            Point.Size = new Size(75, 97);
             Point.TabIndex = 14;
             Point.Text = ".";
             Point.UseVisualStyleBackColor = false;
@@ -138,10 +162,10 @@ namespace WinFormsApp1
             Number7.FlatStyle = FlatStyle.Flat;
             Number7.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number7.ForeColor = SystemColors.Control;
-            Number7.Location = new Point(4, 4);
-            Number7.Margin = new Padding(2);
+            Number7.Location = new Point(20, 20);
+            Number7.Margin = new Padding(10);
             Number7.Name = "Number7";
-            Number7.Size = new Size(81, 87);
+            Number7.Size = new Size(75, 94);
             Number7.TabIndex = 0;
             Number7.Text = "7";
             Number7.UseVisualStyleBackColor = false;
@@ -157,10 +181,10 @@ namespace WinFormsApp1
             Number8.FlatStyle = FlatStyle.Flat;
             Number8.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number8.ForeColor = SystemColors.Control;
-            Number8.Location = new Point(89, 4);
-            Number8.Margin = new Padding(2);
+            Number8.Location = new Point(115, 20);
+            Number8.Margin = new Padding(10);
             Number8.Name = "Number8";
-            Number8.Size = new Size(81, 87);
+            Number8.Size = new Size(75, 94);
             Number8.TabIndex = 1;
             Number8.Text = "8";
             Number8.UseVisualStyleBackColor = false;
@@ -176,10 +200,10 @@ namespace WinFormsApp1
             Number9.FlatStyle = FlatStyle.Flat;
             Number9.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number9.ForeColor = SystemColors.Control;
-            Number9.Location = new Point(174, 4);
-            Number9.Margin = new Padding(2);
+            Number9.Location = new Point(210, 20);
+            Number9.Margin = new Padding(10);
             Number9.Name = "Number9";
-            Number9.Size = new Size(81, 87);
+            Number9.Size = new Size(75, 94);
             Number9.TabIndex = 2;
             Number9.Text = "9";
             Number9.UseVisualStyleBackColor = false;
@@ -196,13 +220,12 @@ namespace WinFormsApp1
             ActionAdd.FlatStyle = FlatStyle.Flat;
             ActionAdd.Font = new Font("Segoe UI Black", 40F, FontStyle.Bold, GraphicsUnit.Point);
             ActionAdd.ForeColor = SystemColors.Control;
-            ActionAdd.Location = new Point(259, 4);
-            ActionAdd.Margin = new Padding(2);
+            ActionAdd.Location = new Point(305, 20);
+            ActionAdd.Margin = new Padding(10);
             ActionAdd.Name = "ActionAdd";
-            ActionAdd.Size = new Size(83, 87);
+            ActionAdd.Size = new Size(75, 94);
             ActionAdd.TabIndex = 3;
             ActionAdd.Text = "+";
-            ActionAdd.TextAlign = ContentAlignment.TopRight;
             ActionAdd.UseVisualStyleBackColor = false;
             ActionAdd.Click += PerformOperation;
             // 
@@ -216,10 +239,10 @@ namespace WinFormsApp1
             Number4.FlatStyle = FlatStyle.Flat;
             Number4.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number4.ForeColor = SystemColors.Control;
-            Number4.Location = new Point(4, 95);
-            Number4.Margin = new Padding(2);
+            Number4.Location = new Point(20, 134);
+            Number4.Margin = new Padding(10);
             Number4.Name = "Number4";
-            Number4.Size = new Size(81, 87);
+            Number4.Size = new Size(75, 94);
             Number4.TabIndex = 4;
             Number4.Text = "4";
             Number4.UseVisualStyleBackColor = false;
@@ -235,10 +258,10 @@ namespace WinFormsApp1
             Number5.FlatStyle = FlatStyle.Flat;
             Number5.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number5.ForeColor = SystemColors.Control;
-            Number5.Location = new Point(89, 95);
-            Number5.Margin = new Padding(2);
+            Number5.Location = new Point(115, 134);
+            Number5.Margin = new Padding(10);
             Number5.Name = "Number5";
-            Number5.Size = new Size(81, 87);
+            Number5.Size = new Size(75, 94);
             Number5.TabIndex = 5;
             Number5.Text = "5";
             Number5.UseVisualStyleBackColor = false;
@@ -254,10 +277,10 @@ namespace WinFormsApp1
             Number6.FlatStyle = FlatStyle.Flat;
             Number6.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number6.ForeColor = SystemColors.Control;
-            Number6.Location = new Point(174, 95);
-            Number6.Margin = new Padding(2);
+            Number6.Location = new Point(210, 134);
+            Number6.Margin = new Padding(10);
             Number6.Name = "Number6";
-            Number6.Size = new Size(81, 87);
+            Number6.Size = new Size(75, 94);
             Number6.TabIndex = 6;
             Number6.Text = "6";
             Number6.UseVisualStyleBackColor = false;
@@ -273,10 +296,10 @@ namespace WinFormsApp1
             RestartAction.FlatStyle = FlatStyle.Flat;
             RestartAction.Font = new Font("Segoe UI Black", 50F, FontStyle.Bold, GraphicsUnit.Point);
             RestartAction.ForeColor = SystemColors.Control;
-            RestartAction.Location = new Point(259, 95);
-            RestartAction.Margin = new Padding(2);
+            RestartAction.Location = new Point(305, 134);
+            RestartAction.Margin = new Padding(10);
             RestartAction.Name = "RestartAction";
-            RestartAction.Size = new Size(83, 87);
+            RestartAction.Size = new Size(75, 94);
             RestartAction.TabIndex = 7;
             RestartAction.Text = "-";
             RestartAction.TextAlign = ContentAlignment.TopCenter;
@@ -293,10 +316,10 @@ namespace WinFormsApp1
             Number1.FlatStyle = FlatStyle.Flat;
             Number1.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number1.ForeColor = SystemColors.Control;
-            Number1.Location = new Point(4, 186);
-            Number1.Margin = new Padding(2);
+            Number1.Location = new Point(20, 248);
+            Number1.Margin = new Padding(10);
             Number1.Name = "Number1";
-            Number1.Size = new Size(81, 87);
+            Number1.Size = new Size(75, 94);
             Number1.TabIndex = 8;
             Number1.Text = "1";
             Number1.UseVisualStyleBackColor = false;
@@ -312,10 +335,10 @@ namespace WinFormsApp1
             Number2.FlatStyle = FlatStyle.Flat;
             Number2.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number2.ForeColor = SystemColors.Control;
-            Number2.Location = new Point(89, 186);
-            Number2.Margin = new Padding(2);
+            Number2.Location = new Point(115, 248);
+            Number2.Margin = new Padding(10);
             Number2.Name = "Number2";
-            Number2.Size = new Size(81, 87);
+            Number2.Size = new Size(75, 94);
             Number2.TabIndex = 9;
             Number2.Text = "2";
             Number2.UseVisualStyleBackColor = false;
@@ -331,10 +354,10 @@ namespace WinFormsApp1
             Number3.FlatStyle = FlatStyle.Flat;
             Number3.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             Number3.ForeColor = SystemColors.Control;
-            Number3.Location = new Point(174, 186);
-            Number3.Margin = new Padding(2);
+            Number3.Location = new Point(210, 248);
+            Number3.Margin = new Padding(10);
             Number3.Name = "Number3";
-            Number3.Size = new Size(81, 87);
+            Number3.Size = new Size(75, 94);
             Number3.TabIndex = 10;
             Number3.Text = "3";
             Number3.UseVisualStyleBackColor = false;
@@ -350,10 +373,10 @@ namespace WinFormsApp1
             MultiplyAction.FlatStyle = FlatStyle.Flat;
             MultiplyAction.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             MultiplyAction.ForeColor = SystemColors.Control;
-            MultiplyAction.Location = new Point(259, 186);
-            MultiplyAction.Margin = new Padding(2);
+            MultiplyAction.Location = new Point(305, 248);
+            MultiplyAction.Margin = new Padding(10);
             MultiplyAction.Name = "MultiplyAction";
-            MultiplyAction.Size = new Size(83, 87);
+            MultiplyAction.Size = new Size(75, 94);
             MultiplyAction.TabIndex = 11;
             MultiplyAction.Text = "X";
             MultiplyAction.UseVisualStyleBackColor = false;
@@ -369,10 +392,11 @@ namespace WinFormsApp1
             DelAction.FlatStyle = FlatStyle.Flat;
             DelAction.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             DelAction.ForeColor = SystemColors.Control;
-            DelAction.Location = new Point(174, 277);
-            DelAction.Margin = new Padding(2);
+            DelAction.Location = new Point(400, 20);
+            DelAction.Margin = new Padding(10);
             DelAction.Name = "DelAction";
-            DelAction.Size = new Size(81, 90);
+            KeyboardPanel.SetRowSpan(DelAction, 2);
+            DelAction.Size = new Size(75, 208);
             DelAction.TabIndex = 12;
             DelAction.Text = "CE";
             DelAction.UseVisualStyleBackColor = false;
@@ -380,7 +404,7 @@ namespace WinFormsApp1
             // 
             // EqualsAction
             // 
-            EqualsAction.BackColor = Color.Silver;
+            EqualsAction.BackColor = Color.DarkSeaGreen;
             EqualsAction.BackgroundImageLayout = ImageLayout.None;
             EqualsAction.Dock = DockStyle.Fill;
             EqualsAction.FlatAppearance.BorderColor = Color.White;
@@ -388,10 +412,11 @@ namespace WinFormsApp1
             EqualsAction.FlatStyle = FlatStyle.Flat;
             EqualsAction.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
             EqualsAction.ForeColor = SystemColors.Control;
-            EqualsAction.Location = new Point(259, 277);
-            EqualsAction.Margin = new Padding(2);
+            EqualsAction.Location = new Point(400, 248);
+            EqualsAction.Margin = new Padding(10);
             EqualsAction.Name = "EqualsAction";
-            EqualsAction.Size = new Size(83, 90);
+            KeyboardPanel.SetRowSpan(EqualsAction, 2);
+            EqualsAction.Size = new Size(75, 211);
             EqualsAction.TabIndex = 13;
             EqualsAction.Text = "=";
             EqualsAction.UseVisualStyleBackColor = false;
@@ -401,9 +426,9 @@ namespace WinFormsApp1
             // 
             LayoutPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             LayoutPanel.ColumnCount = 3;
-            LayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            LayoutPanel.ColumnStyles.Add(new ColumnStyle());
-            LayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            LayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2F));
+            LayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 96F));
+            LayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2F));
             LayoutPanel.Controls.Add(KeyboardPanel, 1, 1);
             LayoutPanel.Controls.Add(Panel, 1, 0);
             LayoutPanel.Dock = DockStyle.Fill;
@@ -412,23 +437,22 @@ namespace WinFormsApp1
             LayoutPanel.RowCount = 2;
             LayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             LayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
-            LayoutPanel.Size = new Size(388, 463);
+            LayoutPanel.Size = new Size(516, 598);
             LayoutPanel.TabIndex = 2;
-            LayoutPanel.Paint += LayoutPanel_Paint;
             // 
             // Panel
             // 
-            Panel.BackColor = Color.Black;
+            Panel.BackColor = Color.Gainsboro;
             Panel.BorderStyle = BorderStyle.None;
             Panel.Cursor = Cursors.IBeam;
             Panel.Dock = DockStyle.Bottom;
-            Panel.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            Panel.ForeColor = Color.WhiteSmoke;
-            Panel.Location = new Point(20, 25);
+            Panel.Font = new Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point);
+            Panel.ForeColor = Color.Black;
+            Panel.Location = new Point(10, 15);
             Panel.Margin = new Padding(0, 0, 0, 30);
             Panel.Name = "Panel";
             Panel.RightToLeft = RightToLeft.No;
-            Panel.Size = new Size(346, 37);
+            Panel.Size = new Size(495, 74);
             Panel.TabIndex = 1;
             Panel.TextAlign = HorizontalAlignment.Right;
             Panel.TextChanged += UpdateValue;
@@ -437,11 +461,13 @@ namespace WinFormsApp1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Desktop;
-            ClientSize = new Size(388, 463);
+            BackColor = SystemColors.ControlLight;
+            ClientSize = new Size(516, 598);
             Controls.Add(LayoutPanel);
             ForeColor = SystemColors.ControlLightLight;
             Name = "Calculator";
+            ShowIcon = false;
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Calculator";
             KeyboardPanel.ResumeLayout(false);
             LayoutPanel.ResumeLayout(false);
@@ -470,5 +496,6 @@ namespace WinFormsApp1
         private TextBox Panel;
         private Button Point;
         private Button Number0;
+        private Button divide;
     }
 }
