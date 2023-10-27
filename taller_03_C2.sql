@@ -62,5 +62,5 @@ BEGIN
   ELSEIF pOperation = "borrar" THEN
     DELETE FROM Club
       WHERE idClub = pIdClub;
-  ENDIF;
+  END IF;
 END //
