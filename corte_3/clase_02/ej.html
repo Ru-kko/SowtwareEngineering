@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script type="text/javascript">
+
+      async function foo() {
+        let res = await fetch(
+          "https://system.tecambiocash.com/api/currency_value/Bancolombia"
+        ).then((r) => r.json());
+        console.log(res.value);
+        return res
+      }
+      let res = foo()
+    </script>
+  </body>
+</html>

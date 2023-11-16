@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script type="text/javascript">
+      let aVals = new Array(1, 1, 2, 3, 3, 3, 5, 5, 7, 11);
+
+      function countValues(vals) {
+        let res = new Array();
+        let nPrev = vals[0];
+        let nCount = 0;
+
+        for (let i = 0; i < vals.length; i++) {
+          if (vals[i] != nPrev) {
+            if (vals != -1)
+              res.push(new Array(nPrev, nCount));
+            nCount = 1;
+            nPrev = vals[i]
+          } else nCount++;
+        }
+        res.push(new Array(nPrev, nCount));
+        return res;
+      }
+    </script>
+  </body>
+</html>

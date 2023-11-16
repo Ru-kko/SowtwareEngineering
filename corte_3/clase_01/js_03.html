@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript">
+    function validate(form) {
+      form.preventDefault();
+      if (form.username.value === form.password.value) {
+        alert("The password cannot be the same than username");
+        form.password.value = "";
+        form.username.value = "";
+        return;
+      }
+      form.submit();
+    }
+  </script>
+  <title>Form Javascript</title>
+</head>
+<body>
+  <form action="example" method="post">
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    <input type="button" value="validate" onclick="validate(this.form)">
+  </form>
+  
+</body>
+</html>
