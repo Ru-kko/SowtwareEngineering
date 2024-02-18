@@ -39,13 +39,13 @@ public class Main {
       run();
     }
 
-    System.out.flush();
-
+    Common.ClearConsole();
     this.EXERCISES[opt - 1].run();
 
     System.out.println("Precione enter para continuar");
     sc.nextLine();
 
+    Common.ClearConsole();
     this.run();
   }
 

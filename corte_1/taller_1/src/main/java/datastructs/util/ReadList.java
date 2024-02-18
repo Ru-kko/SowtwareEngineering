@@ -45,6 +45,7 @@ public class ReadList<T> {
         }
 
         System.out.println("Se nesecita un minimo de " + this.leftLimit + " valores");
+        continue;
       }
 
       try {

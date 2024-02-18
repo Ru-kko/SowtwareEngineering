@@ -15,7 +15,7 @@ public class Point04 implements IExercise {
 
   public Point04() {
     this.reader = new ReadList<>(Person::parse);
-    this.reader.setLeftLimit(2);
+    this.reader.setLeftLimit(5);
   }
 
   @Override
