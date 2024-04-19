@@ -1,1 +1,2 @@
 *.pdf
+/corte_*/**/target/
