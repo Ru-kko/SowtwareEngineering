@@ -22,11 +22,13 @@ public class BinaryTree<T> extends Tree<T> {
 
     if (current.getLeft() == null) {
       current.setLeft(val);
+      this.increase();
       this.queue.add(current.getLeft());
       return;
     }
     if (current.getRight() == null) {
       current.setRight(val);
+      this.increase();
       this.queue.add(current.getRight());
       this.queue.poll();
       return;

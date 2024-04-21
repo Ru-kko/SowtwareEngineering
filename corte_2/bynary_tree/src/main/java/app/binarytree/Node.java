@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @NoArgsConstructor
 @RequiredArgsConstructor
-class Node<T> {
+public class Node<T> {
   @NonNull
   private T value;
 
@@ -25,5 +25,13 @@ class Node<T> {
 
   void setRight(T right) {
     this.right = new Node<T>(right);
+  }
+
+  void setLeft(Node<T> left) {
+    this.left = left;
+  }
+
+  void setRight(Node<T> right) {
+    this.right = right;
   }
 }

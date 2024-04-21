@@ -7,7 +7,7 @@ public class RouteFactory {
 
   public static <T> Route<T> getRouteIteratorFactory(String factoryType) {
     return switch (factoryType) {
-      case PREORDER -> new PostorderFactory<>();
+      case PREORDER -> new PreorderFactory<>();
       case POSTORDER -> new PostorderFactory<>();
       case INORDER -> new InorderFactory<>();
       default -> null;

@@ -64,7 +64,7 @@ public class ListFactory<T> {
     while (!last.trim().toLowerCase().equals(CLOSE_KEYWORD)) {
       try {
         T val = this.parser.parse(last);
-        res.push(val);
+        res.add(val);
         count ++;
       } catch (ParseException | NumberFormatException e) {
         System.out.println(this.retryMessage);
