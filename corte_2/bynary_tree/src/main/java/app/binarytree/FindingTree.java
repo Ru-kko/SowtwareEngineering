@@ -27,6 +27,7 @@ public class FindingTree<T> extends Tree<T> {
 
   private Node<T> add(Node<T> current, T value) {
     if (current == null) {
+      super.increase();
       return new Node<T>(value);
     }
     Integer compare = this.comparator.compare(value, current.getValue());
