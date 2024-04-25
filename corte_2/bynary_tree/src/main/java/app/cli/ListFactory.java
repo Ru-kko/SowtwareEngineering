@@ -44,7 +44,7 @@ public class ListFactory<T> {
     return new ListFactory<>(new StringParser(), "Escriba una palabra", null, "No°%d", "Escriba la palabra");
   }
 
-  public static <E> ListFactory<E> getIntance(Class<E> clazz, Parser<E> parser) {
+  public static <E> ListFactory<E> getIntance(Parser<E> parser) {
     return new ListFactory<>(
         parser,
         "Escriba un valor de la forma " + parser.getFormat(),
