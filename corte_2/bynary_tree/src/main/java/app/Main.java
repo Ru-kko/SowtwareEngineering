@@ -24,10 +24,10 @@ public class Main {
 
     String select = sc.nextLine();
 
-    if (select.trim().toLowerCase() == "a") {
+    if (select.trim().toLowerCase().equals("a")) {
       Main.findingTree();
     }
-    if (select.trim().toLowerCase() == "b") {
+    if (select.trim().toLowerCase().equals("b")) {
       Main.expresionTree();
     }
     sc.close();
