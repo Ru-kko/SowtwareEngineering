@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import app.binarytree.BinaryTree;
+import app.binarytree.ExpressionTree;
 import app.binarytree.FindingTree;
 import app.binarytree.Tree;
 import app.cli.ListFactory;
@@ -28,33 +28,32 @@ public class Main {
       Main.findingTree();
     }
     if (select.trim().toLowerCase().equals("b")) {
-      Main.expresionTree();
+      Main.expresionTree(sc);
     }
     sc.close();
   }
 
-  private static void expresionTree() {
-     ListFactory<String> factory = ListFactory.getStringInstance();
-     List<String> data = factory.get();
+  private static void expresionTree(Scanner sc) {
+    System.out.println("Escribe una exprecion");
 
-     Tree<String> tree = new BinaryTree<>();
+    Tree<String> tree = ExpressionTree.getIntance(sc.nextLine());
 
-     tree.addMany(data);
+    Route<String> pre = RouteFactory.getRouteIteratorFactory(RoteOrder.PREORDER);
+    Route<String> in = RouteFactory.getRouteIteratorFactory(RoteOrder.INORDER);
+    Route<String> post = RouteFactory.getRouteIteratorFactory(RoteOrder.POSTORDER);
 
-     Route<String> pre = RouteFactory.getRouteIteratorFactory(RoteOrder.POSTORDER);
-     Route<String> in = RouteFactory.getRouteIteratorFactory(RoteOrder.INORDER);
-     Route<String> post = RouteFactory.getRouteIteratorFactory(RoteOrder.POSTORDER);
+    System.out.println("Preorder: " + pre.createRoute(tree));
+    System.out.println("Postorder: " + post.createRoute(tree));
+    System.out.println("Inorder: " + in.createRoute(tree));
+  }
 
-     System.out.println("Preorder: " + pre.createRoute(tree));
-     System.out.println("Postorder: " + post.createRoute(tree));
-     System.out.println("Inorder: " + in.createRoute(tree));
-  } 
   private static void findingTree() {
     ListFactory<Integer> factory = ListFactory.getIntance(new Parser<Integer>() {
       @Override
       public String getFormat() {
         return "";
       }
+
       @Override
       public Integer parse(String msg) throws NumberFormatException, ParseException {
         return Integer.parseInt(msg);
@@ -65,13 +64,12 @@ public class Main {
 
     Tree<Integer> tree = new FindingTree<Integer>((a, b) -> a - b);
     tree.addMany(data);
-    
- 
+
     Route<Integer> routeFactory = getFactory();
     List<Integer> route = routeFactory.createRoute(tree);
 
     System.out.println(Arrays.toString(route.toArray()));
-    
+
     System.out.println("Size: " + tree.size());
   }
 
