@@ -1,3 +1,3 @@
-# Repositorio de todos mis trabajos y tareas de ingenieria en la universidad compensar
+# Repositorio de todos mis trabajos y tareas de calculo Integral
 ## Jose Sebastian Vera
 
