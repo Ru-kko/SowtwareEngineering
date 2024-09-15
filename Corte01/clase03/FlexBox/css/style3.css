@@ -1,0 +1,57 @@
+body{
+    background:beige;
+}
+
+/*flex*/
+
+.flex-contenedor{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-content: center;
+    width: 80%; 
+    height: 500px;
+    margin: 0 auto;
+}
+
+.caja {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 5px;
+}
+
+.c1{
+    background: lightblue;
+    order: 3;
+    flex-grow: 1;/*diferenciar anchos o expansion ... derecho de */
+    /* flex-basis: 50%; como el width*/
+    
+}
+
+.c2{
+    background: lightcoral;
+    order: 2;
+    flex-grow: 12;
+}
+
+.c3{
+    background:lightgreen;
+    order: 1;
+    flex-grow: 1;
+}
+
+.c4{
+    background:rgb(7, 120, 7);
+    order: 1;
+    flex-grow: 3;
+}

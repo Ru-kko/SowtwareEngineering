@@ -1,0 +1,28 @@
+body{
+    background:beige;
+}
+
+/*flex*/
+
+.flex-contenedor{
+    border: 5px solid black;
+    background: #ccc;
+    padding: 50px;
+    display: flex;/*esto coloca cada caja una al lado de la otra*/
+    flex-flow: row-reverse wrap; 
+    width: 80%;
+    margin: 0 auto;/*para centrar*/
+}
+
+.caja {
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    margin: 15px;
+}

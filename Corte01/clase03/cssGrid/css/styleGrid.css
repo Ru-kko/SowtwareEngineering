@@ -1,0 +1,12 @@
+.contenedor{
+    display:grid;
+    grid-template-columns: minmax(350px,2fr) 1fr 1fr;
+    grid-template-rows: 200px 500px;
+}
+.contenedor .item{
+    background:chartreuse;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
